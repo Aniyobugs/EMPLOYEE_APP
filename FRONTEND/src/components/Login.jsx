@@ -2,7 +2,8 @@ import { Box, Button, TextField, Typography } from '@mui/material'
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-
+import GoogleIcon from '@mui/icons-material/Google';
+import GitHubIcon from '@mui/icons-material/GitHub';
 const Login = () => {
     var[input,setInput] =useState({})
     var baseurl = import.meta.env.VITE_API_BASE_URL;
@@ -145,10 +146,47 @@ const Login = () => {
         Create one
       </Link>
     </Typography>
+    
+    <Typography 
+        variant="caption" 
+        sx={{ color: '#a0aec0' }}
+      >
+        Or continue with
+      </Typography>
+   
 
-    <Typography variant="subtitle2" sx={{ color: "#9c27b0", marginTop: 4, fontStyle: 'italic' }}>
-      “Success usually comes to those who are too busy to be looking for it.” – Henry David Thoreau
-    </Typography>
+    <div style={{ 
+      display: 'flex', 
+      gap: '16px', 
+      justifyContent: 'center' 
+    }}>
+      <Button
+        variant="outlined"
+        sx={{
+          borderRadius: '8px',
+          padding: '8px 16px',
+          borderColor: '#e2e8f0',
+          '&:hover': {
+            borderColor: '#cbd5e0'
+          }
+        }}
+      >
+        <GoogleIcon sx={{ color: '#e53e3e' }} />
+      </Button>
+      <Button
+        variant="outlined"
+        sx={{
+          borderRadius: '8px',
+          padding: '8px 16px',
+          borderColor: '#e2e8f0',
+          '&:hover': {
+            borderColor: '#cbd5e0'
+          }
+        }}
+      >
+        <GitHubIcon sx={{ color: '#2d3748' }} />
+      </Button>
+    </div>
   </Box>
 </div>
   )
