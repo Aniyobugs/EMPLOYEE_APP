@@ -188,7 +188,7 @@ if (location.state !== null) {
 
         <TextField
           fullWidth
-          label='Description'
+          label='Location'
           variant='outlined'
           margin='normal'
           name='lname'
